@@ -13,8 +13,9 @@ def load_wrapper(s):
 @genty
 class loads_tests (unittest.TestCase):
     @genty_dataset(
-        from_int=('1',),
-        from_float=('1.0',),
+        one_point_oh=('1.0',),
+        three_point_two=('3.2',),
+        oh_point_seven=('0.7',),
     )
     def test_decimal_parsing(self, input):
         expected = Decimal(input)
