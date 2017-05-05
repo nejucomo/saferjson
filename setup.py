@@ -7,7 +7,9 @@ PACKAGE = 'saferjson'
 
 setup(
     name=PACKAGE,
-    description='JSON parsing/serialization with safety and precision improvements.',
+    description=(
+        'JSON parsing/serialization with safety and precision improvements.'
+    ),
     version='0.1',
     author='Nathan Wilcox',
     author_email='nejucomo@gmail.com',
@@ -15,13 +17,14 @@ setup(
     url='https://github.com/nejucomo/{}'.format(PACKAGE),
 
     packages=find_packages(),
+    install_requires=[
+        'genty == 1.3.2',
+        # 'mock == 2.0.0',
+    ],
 
     entry_points={
         'console_scripts': [
-            '{} = {}.main:main'.format(
-                PACKAGE.replace('_', '-'),
-                PACKAGE,
-            )
+            '{0}-check = {0}.check:main'.format(PACKAGE)
         ],
     }
 )

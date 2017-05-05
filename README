@@ -1,0 +1,7 @@
+===========
+ saferjson
+===========
+
+JSON with safety features: improved precision, duplicate keys checks,
+canonical serialization.
+
