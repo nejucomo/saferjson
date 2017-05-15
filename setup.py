@@ -24,7 +24,7 @@ setup(
 
     entry_points={
         'console_scripts': [
-            '{0} = {0}.check:main'.format(PACKAGE)
+            '{0} = {0}.main:main'.format(PACKAGE)
         ],
     }
 )
